@@ -3,7 +3,7 @@
 // 如果 TS 能够自动分析变量类型，我们就什么也不需要做了
 // 如果 TS 无法分析变量类型的话，我们就需要使用类型注解
 
-// let count: number;
+// let count: number;   // 显示的，类型注解
 // count = 123;
 
 // let countInference = 123;
