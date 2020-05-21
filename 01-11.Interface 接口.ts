@@ -3,9 +3,12 @@ interface Person {
   // readonly name: string;
   name: string;
   age?: number;
-  [propName: string]: any;
+  [propName: string]: any;   // 不确定的参数
   say(): string;
 }
+
+// type类型别名可以定义单个，interface只能对象
+type Person2 = string
 
 interface Teacher extends Person {
   teach(): string;
@@ -34,15 +37,17 @@ const person = {
   }
 };
 
-getPersonName(person);
-setPersonName(person, 'lee');
+// getPersonName(person);
+// setPersonName(person, 'lee');
 
-class User implements Person {
-  name = 'dell';
-  say() {
-    return 'hello';
-  }
-}
+
+// 类应用了一个接口
+// class User implements Person {
+//   name = 'dell';
+//   say() {
+//     return 'hello';
+//   }
+// }
 
 const say: SayHi = (word: string) => {
   return word;

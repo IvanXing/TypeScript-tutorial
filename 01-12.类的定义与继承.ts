@@ -5,7 +5,8 @@ class Person {
   }
 }
 
-class Teacher extends Person {
+// 方法重写覆盖后，用super调用父类的方法  super指向父类方法
+class Teacher10 extends Person {
   getTeacherName() {
     return 'Teacher';
   }
@@ -14,6 +15,6 @@ class Teacher extends Person {
   }
 }
 
-const teacher = new Teacher();
+const teacher = new Teacher10();
 console.log(teacher.getName());
 console.log(teacher.getTeacherName());

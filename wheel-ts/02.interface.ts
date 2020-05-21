@@ -4,13 +4,13 @@
 // Duck Typing  会嘎嘎，会游泳，就可以看成鸭子，推断策略，关注对象如何被使用
 
 
-interface Person {
+interface Person1 {
     readonly id: number;
     name: string;
     age?: number;
 }
 
-let dodo: Person = {
+let dodo: Person1 = {
     id: 1234,
     name: 'dodo',
 }

@@ -1,4 +1,5 @@
-// readonly
+// readonly类属性修饰符
+
 // class Person {
 //   public readonly name: string;
 //   constructor(name: string) {
@@ -10,15 +11,18 @@
 // person.name = 'hello';
 // console.log(person.name);
 
-// 抽象类
+// 抽象类  提取图像类公共部分
+// 抽象类只能被继承，不能被直接实例化
+
 // abstract class Geom {
 //   width: number;
 //   getType() {
 //     return 'Gemo';
 //   }
-//   abstract getArea(): number;
+//   abstract getArea(): number;   // 抽象方法，子类需要具体实现
 // }
 
+// 抽象类的实现类
 // class Circle extends Geom {
 //   getArea() {
 //     return 123;

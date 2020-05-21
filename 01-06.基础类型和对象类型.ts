@@ -19,6 +19,6 @@ const numbers: number[] = [1, 2, 3];
 const dell: Person = new Person();
 
 // 函数类型 返回number
-const getTotal: () => number = () => {
+const getTotal1: () => number = () => {
   return 123;
 };

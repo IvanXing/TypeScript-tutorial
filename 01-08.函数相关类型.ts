@@ -24,5 +24,5 @@ function getNumber({ first }: { first: number }) {
   return first;
 }
 
-const total = add({ first: 1, second: 2 });
-const count = getNumber({ first: 1 });
+const total1 = add({ first: 1, second: 2 });
+const count1 = getNumber({ first: 1 });

@@ -3,14 +3,15 @@
 // 如果 TS 能够自动分析变量类型，我们就什么也不需要做了
 // 如果 TS 无法分析变量类型的话，我们就需要使用类型注解
 
-// let count: number;   // 显示的，类型注解
+
+// let count: number;   // 显式声明，类型注解
 // count = 123;
 
-// let countInference = 123;
+// let countInference = 123;  // 自动推断
 
 // const firstNumber = 1;
 // const secondNumber = 2;
-// const total = firstNumber + secondNumber;
+// const total = firstNumber + secondNumber;  // 推断数字
 
 function getTotal(firstNumber: number, secondNumber: number) {
   return firstNumber + secondNumber;
