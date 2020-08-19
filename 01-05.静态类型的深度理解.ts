@@ -5,5 +5,5 @@ interface Point {
 
 const point: Point = {
   x: 3,
-  y: 4
+  y: 4,
 };

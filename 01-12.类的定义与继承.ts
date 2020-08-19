@@ -1,17 +1,19 @@
 class Person {
-  name = 'dell';
+  name = "dell";
   getName() {
     return this.name;
   }
 }
 
-// 方法重写覆盖后，用super调用父类的方法  super指向父类方法
+// 常规继承，方法重写会覆盖父类方法
+// 解决：方法重写覆盖后，用super调用父类的方法  super指向父类方法
+// super.getName()就是父类的getName
 class Teacher10 extends Person {
   getTeacherName() {
-    return 'Teacher';
+    return "Teacher";
   }
   getName() {
-    return super.getName() + 'lee';
+    return super.getName() + "lee";
   }
 }
 
