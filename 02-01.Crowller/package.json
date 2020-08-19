@@ -1,0 +1,20 @@
+{
+  "name": "ts-demo",
+  "version": "1.0.0",
+  "description": "- npm init -y - tsc --init",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node ./src/crowller.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/superagent": "^4.1.9",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "superagent": "^6.0.0"
+  }
+}

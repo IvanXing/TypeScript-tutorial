@@ -1,0 +1,11 @@
+- npm init -y
+- tsc --init
+- npm uninstall ts-node -g (ts-node 放在项目中)
+- npm install -D ts-node (-D 就是 --save-dev)
+- npm install typescript -D
+- "dev": "ts-node ./src/crowller.ts"
+
+- 安装 superagent 工具
+- npm install superagent --save
+- 解决不识别
+- npm install @types/superagent -D
