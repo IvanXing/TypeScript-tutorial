@@ -9,3 +9,7 @@
 - npm install superagent --save
 - 解决不识别
 - npm install @types/superagent -D
+
+- 类似 jquery 的语法，分析 html
+- npm install cheerio --save
+- npm install @types/cheerio -D
