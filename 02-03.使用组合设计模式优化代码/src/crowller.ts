@@ -4,6 +4,7 @@ import fs from "fs";
 import path from "path";
 import superagent from "superagent";
 import DellAnalyzer from "./dellAnalyzer";
+// import LeeAnalyzer from "./leeAnalyzer";  // 组合模式插入另一套
 
 /* analyzer的类型： 一个实例，必须有analyze方法，且传递两个参数 */
 export interface Analyzer {
@@ -39,4 +40,5 @@ const secret = "x3b174jsx";
 const url = `http://www.dell-lee.com/typescript/demo.html?secret=${secret}`;
 
 const analyzer = new DellAnalyzer();
+// const analyzer = new LeeAnalyzer();
 new Crowller(url, analyzer);
