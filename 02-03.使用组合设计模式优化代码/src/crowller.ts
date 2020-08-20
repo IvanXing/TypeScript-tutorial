@@ -5,11 +5,13 @@ import path from "path";
 import superagent from "superagent";
 import DellAnalyzer from "./dellAnalyzer";
 
+/* analyzer的类型： 一个实例，必须有analyze方法，且传递两个参数 */
+export interface Analyzer {
+  analyze: (html: string, filePath: string) => string;
+}
+
 class Crowller {
   private filePath = path.resolve(__dirname, "../data/course.json");
-  private secret = "x3b174jsx";
-  private url = `http://www.dell-lee.com/typescript/demo.html?secret=${this.secret}`;
-  private rawHtml = "";
 
   // 获取html
   async getRawHtml() {
@@ -27,10 +29,14 @@ class Crowller {
     this.writeFile(fileContent);
   }
 
-  constructor(private analyzer: any) {
+  /* analyzer的类型： 一个实例，必须有analyze方法，且传递两个参数 */
+  constructor(private url: string, private analyzer: Analyzer) {
     this.initSpiderProcess();
   }
 }
 
+const secret = "x3b174jsx";
+const url = `http://www.dell-lee.com/typescript/demo.html?secret=${secret}`;
+
 const analyzer = new DellAnalyzer();
-const crowller = new Crowller(analyzer);
+new Crowller(url, analyzer);

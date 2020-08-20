@@ -1,5 +1,6 @@
 import fs from "fs";
 import cheerio from "cheerio";
+import { Analyzer } from "./crowller";
 
 interface Course {
   title: string;
@@ -15,7 +16,8 @@ interface Content {
   [propName: number]: Course[]; // 时间戳 数字
 }
 
-export default class DellAnalyzer {
+// DellAnalyzer也得遵循 Analyzer类型，要求有analyze方法，返回一个字符串
+export default class DellAnalyzer implements Analyzer {
   // 提取数据
   private getCourseInfo(html: string) {
     const $ = cheerio.load(html);
