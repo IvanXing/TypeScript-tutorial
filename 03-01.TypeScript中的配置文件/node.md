@@ -1,0 +1,6 @@
+- `tsc --init` 生成 tsconfig.json 文件
+- `tsc demo.ts` 的过程中并不使用配置文件
+- 当前目录下执行 `tsc` 会使用配置文件，把当前文件夹下的ts文件全部编译成js文件
+- json中配置`"include": ["./demo.ts"]`,  运行`tsc` 只运行这个文件 或者  `exclude`
+- https://www.tslang.cn/docs/handbook/tsconfig-json.html
+- https://www.tslang.cn/docs/handbook/compiler-options.html
