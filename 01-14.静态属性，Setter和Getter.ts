@@ -1,4 +1,7 @@
-// getter and setter
+/*
+** getter and setter
+** 保护私有变量
+*/
 
 class Person1 {
   constructor(private _name: string) {}
@@ -17,9 +20,10 @@ console.log(person1.name); // get
 person1.name = "dell lee"; // set
 console.log(person1.name);
 
-// ============单例模式代码=====================
-
-// 单例模式 ==> 一个类只允许生成一个实例，只能new一次，存储起来
+/*
+** ============单例模式代码=====================
+** 单例模式 ==> 一个类只允许生成一个实例，只能new一次，存储起来
+*/ 
 
 class Demo {
   // 创建一个instance私有属性挂在Demo上，Demo属性的
@@ -29,7 +33,9 @@ class Demo {
   // new 要调用 constructor，设置为私有，就不能new
   private constructor(public name: string) {}
 
-  // static是把方法直接挂在类上，不需要实例化就可调用
+  /*
+  ** static: 是把方法直接挂在类上，不需要实例化就可调用
+  */
   // new一个实例赋值给instance再返出去
   static getInstance() {
     // 有没有instance Demo
@@ -47,3 +53,8 @@ const demo1 = Demo.getInstance();
 const demo2 = Demo.getInstance();
 console.log(demo1.name);
 console.log(demo2.name);
+
+
+// // 不希望出现可以实例化多个
+// const xxx = new Demo();
+// const yyy = new Demo();

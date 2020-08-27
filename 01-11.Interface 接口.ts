@@ -1,5 +1,10 @@
 // interface 和 type 相类似，但并不完全一致
 
+// 类型别名（type）可以定义单个属性，也就是基础类型，
+// 接口interface只能定义对象
+type Person2 = string;
+
+
 interface Person {
   // readonly name: string;
   name: string;
@@ -8,11 +13,7 @@ interface Person {
   say(): string;
 }
 
-// 类型别名（type）可以定义单个属性，也就是基础类型，
-// 接口interface只能定义对象
-type Person2 = string;
-
-// 接口的继承
+// 接口的继承，同时定义了一个自己的属性
 interface Teacher extends Person {
   teach(): string;
 }
@@ -40,7 +41,9 @@ const person = {
 getPersonName(person);
 setPersonName(person, "lee");
 
-// 类应用了一个接口
+/*
+**类应用了一个接口，必须符合接口定义的类型
+*/
 // class User implements Person {
 //   name = 'dell';
 //   say() {
@@ -48,7 +51,10 @@ setPersonName(person, "lee");
 //   }
 // }
 
-// 接口代表函数，接收string类型的参数，返回string
+/*
+** 函数的类型声明
+** 接口代表函数，接收string类型的参数，返回string
+*/
 interface SayHi {
   (word: string): string;
 }
