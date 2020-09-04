@@ -1,4 +1,7 @@
-// 原型，方法名，参数所在的位置
+/*
+** 参数
+** 原型，方法名，paramIndex，参数所在的位置
+*/
 function paramDecorator(target: any, method: string, paramIndex: number) {
   console.log(target, method, paramIndex);
 }
